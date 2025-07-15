@@ -26,7 +26,7 @@ export function StockChart() {
     if (stocks.length > 0 && selectedStocks.length === 0) {
       setSelectedStocks([stocks[0].symbol]);
     }
-  }, [stocks]);
+  }, [stocks, selectedStocks.length]);
 
   useEffect(() => {
     // Only update if we have selected stocks
